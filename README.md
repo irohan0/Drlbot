@@ -1,4 +1,8 @@
 # DRL_Navigation_Robot_ROS2_Foxy
+*ABSTRACT*
+
+In this study, a mobile robot equipped with a LIDAR sensor is trained to navigate to random goal points in a simulated environment while avoiding obstacles. The training, which was done in ROS Gazebo 11 with PyTorch, demonstrated the robot's learning skills, and was tested using ROS2 Foxy. TD3, which is based on the Deep Deterministic Policy Gradient (DDPG) architecture, uses an actor network to select actions and dual critic networks to reduce Q-value overestimate. The training procedure includes rewards for forward mobility and penalties for being near to obstacles. Tensorboard is used to monitor training progress and provide real-time visualization of the robot's learning process. This application demonstrates the potential of DRL to improve autonomous robot navigation. The robot's navigation accuracy of around 82% indicates the efficacy of the TD3 algorithm in improving autonomous navigation capabilities.
+
  Deep Reinforcement Learning for mobile robot navigation in ROS Gazebo 11 simulator. Using Twin Delayed Deep Deterministic Policy Gradient (TD3) neural network, a robot learns to navigate to a random goal point in a simulated environment while avoiding obstacles. Obstacles are detected by LIDAR (Light Detection and Ranging) sensor and a goal is given to the robot in polar coordinates. Trained in ROS Gazebo 11 simulator with PyTorch. Tested with ROS2 Foxy on Ubuntu 20.04 with python 3.8.10 and pytorch 1.10.
  <p align="center">
     <img width=70% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_example_env1.gif">
