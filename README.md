@@ -7,23 +7,8 @@ TD3 Network Implementation :
 
 TD3 is an actor-critic type of network similar to DDPG. That means that there is an “actor” network that calculates an action to perform, and a “critic” network, that estimates, how good is this action. In a simple form, TD3 architecture is an extension of DDPG architecture to solve the problem of overestimating the Q-value. It does so by introducing a second critic network within the loop and selecting the output from the one that produces the lower Q-value estimations. (Once again, a mathematical and algorithmic background overview can be obtained here.) Therefore, we need to create an actor-network that will take the environmental state as input and output action for the robot to take. Also, we need to create two critic networks that will take the environmental state as well as the action from the actor-network as inputs and will output the estimated value of this state-action pair.
 
-<p align="center">
-    <img width=100% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/assets/101309710/484631fb-669f-44b5-8c6d-b9e7d1db250e">
-</p> 
+![image](https://github.com/user-attachments/assets/f035ffe4-7b25-4e39-a878-5d1067263868)
 
-<p align="center">
-    <img width=50% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Actor.png">
-</p> 
-
-<p align="center">
-    <img width=60% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Critic.png">
-</p> 
-
-<p align="center">
-    <img width=90% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Td3.png">
-</p> 
-
-The detail of the network can be found in src/td3/scripts
 
 The Robot and The Evironment :
 
@@ -90,9 +75,10 @@ monitor the training process by tensorboard. Open the new terminal:
 ```shell
 $ tensorboard dev upload --logdir     './src/td3/runs/train/tensorboard'
 ```
-<p align="center">
-    <img width=70% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Tensorboard.PNG">
-</p>
+![image](https://github.com/user-attachments/assets/84a3d3c7-fd8a-4617-99dc-76fadf36a486)
+![image](https://github.com/user-attachments/assets/93724b55-fffc-467b-a894-9715165820ba)
+![image](https://github.com/user-attachments/assets/f3ac2b98-ff4c-40f9-a13a-334eb2179a44)
+
 
 Training example :
 
